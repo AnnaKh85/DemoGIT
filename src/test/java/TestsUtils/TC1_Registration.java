@@ -20,5 +20,7 @@ public class TC1_Registration extends AndroidBaseTest{
         driver.findElement(By.id("fr.cookbook:id/login_button")).click();
         String errorMsg = driver.findElement(By.id("fr.cookbook:id/error")).getText();
         Assert.assertEquals(errorMsg, "Unable to log in with provided credentials.");
+
+        System.out.println("Commit from New2 branch");
     }
 }

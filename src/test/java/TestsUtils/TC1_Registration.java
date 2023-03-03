@@ -2,6 +2,7 @@ package TestsUtils;
 
 import com.aventstack.extentreports.App;
 import io.appium.java_client.AppiumBy;
+import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -20,5 +21,7 @@ public class TC1_Registration extends AndroidBaseTest{
         driver.findElement(By.id("fr.cookbook:id/login_button")).click();
         String errorMsg = driver.findElement(By.id("fr.cookbook:id/error")).getText();
         Assert.assertEquals(errorMsg, "Unable to log in with provided credentials.");
+
+        System.out.println("This text is from the NewBranch");
     }
 }
